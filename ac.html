@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" type="text/css" href="ac.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <!-- Animated Welcome Message -->
+    <div class="welcome-screen">
+        <h1 class="animated-title">Welcome to Attendance Calculator</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="main-content">
+        <h1 class="static-title">Attendance Calculator</h1>
+
+        <!-- First Box -->
+        <div class="box">
+            <h2>Calculate Attendance</h2>
+            <label for="total-classes">Total Classes :</label>
+            <input type="number" id="total-classes" placeholder="Enter total classes" required>
+
+            <label for="attended-classes">Attended Classes :</label>
+            <input type="number" id="attended-classes" placeholder="Enter attended classes" required>
+
+            <button onclick="calculateAttendance()">Calculate</button>
+            <h3 id="result"></h3>
+            <h3 id="extra-classes"></h3>
+        </div>
+
+        <!-- Second Box -->
+        <div class="box">
+            <h2>Calculate After Skipping Classes</h2>
+            <label for="total-classes2">Total Classes :</label>
+            <input type="number" id="total-classes2" placeholder="Enter total classes" required>
+
+            <label for="attended-classes2">Attended Classes :</label>
+            <input type="number" id="attended-classes2" placeholder="Enter attended classes" required>
+
+            <label for="skip-classes">Classes to Skip :</label>
+            <input type="number" id="skip-classes" placeholder="Enter classes to skip" required>
+
+            <button onclick="calculateAfterSkipping()">Calculate</button>
+            <h3 id="result2"></h3>
+            <h3 id="extra-classes2"></h3>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="notes">
+            <h2>Note:</h2>
+            <ol>
+                <li>If you have any suggestions please mail <a href="mailto: b210108@rgukt.ac.in">here</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="ac.js"></script>
+</body>
+</html>
